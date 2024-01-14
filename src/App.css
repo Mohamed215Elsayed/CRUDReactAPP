@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+/* App.css */
+
+.header {
+    padding-bottom: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+    padding-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content {
+    padding-top: 30px;
+}
+
+/*****************/
+
+/* Sidebar.css */
+
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+
+    min-height: 100vh;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a.active {
+    font-weight: bold;
+}
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 250px;
+      height: 100vh;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+  
+    .sidebar.open {
+      left: 0;
+    }
   }
+
+/***********************/
+.operation-buttons {
+    display: flex;
+    /* gap: 15px;  */
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ************ */
+/* App.css */
+
+.container-fluid {
+    padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.products-container {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.operation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.table-footer {
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/*********/
+/* Navbar.css */
+
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.nav-link.active {
+    color: yellow;
+}
+/*  */
+.product-table tr:nth-child(even) {
+    background-color: #f8f9fa;
   }
-  to {
-    transform: rotate(360deg);
+/**********buttons in products table********/
+.scroll-buttons  .scroll-buttonTop{
+    position: fixed;
+    bottom: -5px;
+    right: 5px;
   }
+  .scroll-buttons  .scroll-buttonBottom{
+    position: fixed;
+    top: 150px;
+    right: 5px;
+  }
+  
+  .scroll-buttonTop, .scroll-buttonBottom {
+    display: block;
+    /* margin-bottom: 10px; */
+    /* padding: 10px; */
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #333;
+}
+  
+  .scroll-buttonTop:hover, .scroll-buttonBottom:hover {
+    background-color: #2b2b2b;
+    color: #fff;
+  }
+  /****************/
+  .feature{
+    background-image:url(./Pages/hero_eval_metrics.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+    min-height: 100vh;
+    position: relative;
+    background-origin: padding-box;
+    margin-bottom: 20px;
+    border-radius:20px;
 }
